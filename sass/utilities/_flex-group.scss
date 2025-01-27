@@ -19,12 +19,17 @@
   --flex-column-gap: 0.5rem;
 }
 
+.flex-col-gap-tightest {
+  --flex-column-gap: 0.3rem;
+}
+
 .flex-center {
   justify-content: center;
   align-items: center;
 }
 
 .flex-space-between {
+  align-items: center;
   justify-content: space-between;
 }
 .flex-nowrap {
