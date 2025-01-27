@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 .hero {
-  border-radius: 50px;
+  border-radius: 50px 50px 0 0;
   justify-content: center;
   // background: url("../public/imgs/mooning.png"), #f1f1ef; /* Base color */
   // background-blend-mode: multiply;
@@ -39,7 +39,7 @@
     align-self: center;
     text-decoration: none;
     color: $color-neutral-000;
-    background-color: $body-text-color;
+    background-color: $color-neutral-800;
     padding: $size-4 $size-6;
     border-radius: 50px;
     display: inline-block;
