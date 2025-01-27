@@ -14,25 +14,64 @@
     />
   </head>
 
-  <body>
-    <header>
-      <div
-        class="navigation container flex-group flex-space-between padding-block-start-8 padding-inline-8"
+  <body class="margin-block-start-4">
+    <div class="hero flex-group container" | data-type="wide">
+      <header
+        class="navigation container flex-group flex-space-between padding-block-start-10 padding-inline-10"
         |
         data-type="wide"
       >
-        <ul class="nav flex-group">
-          <li><a href=""></a>My Work</li>
-          <li><a href=""></a>Linkedin</li>
+        <ul
+          class="nav flex-group flex-col-gap-tighter flex-center nav-link-group1"
+        >
+          <p>hwezah.dev@gmail.com</p>
+          <!-- <li><a href="">My Work</a></li> -->
+          <li><a href="">Cv</a></li>
         </ul>
-        <ul class="nav flex-group">
-          <li><a href=""></a>Linkedin</li>
-          <li><a href=""></a>Github</li>
-          <li><a href=""></a>Tweeter</li>
+        <ul class="nav flex-group flex-col-gap-tighter nav-link-group2">
+          <li><a href="">Linkedin</a></li>
+          <li><a href="">Github</a></li>
+          <li><a href="">Tweeter</a></li>
         </ul>
+      </header>
+
+      <div
+        class="hero__content padding-block-14 flex-group flex-center text-center direction-column flow"
+      >
+        <img class="hero__img" src="public/imgs/DSC_3751.jpg" alt="" />
+        <div class="hero__text">
+          <h1 class="fs-800">
+            Building digital <span>products,brands,and</span
+            ><span>web experiences.</span>
+          </h1>
+        </div>
+        <a
+          class="hero__link flex-group flex-col-gap-tightest flex-space-between"
+          href=""
+          ><span>Latest Work</span>
+          <svg
+            viewBox="0 0 18 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M6 18L8.5 15.5M18 6H9M18 6V15M18 6L11.5 12.5"
+                stroke="#ffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g></svg
+        ></a>
       </div>
-    </header>
-    <div class="hero container" | data-type="wide"></div>
+    </div>
     <main></main>
 
     <script src="/main.js"></script>
