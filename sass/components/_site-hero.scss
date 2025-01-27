@@ -1,9 +1,16 @@
 @use "../abstracts" as *;
 .hero {
+  border-radius: 50px;
   justify-content: center;
-  background: url("../public/imgs/mooning.png"), #f1f1ef; /* Base color */
-  background-blend-mode: multiply;
-  background-repeat: repeat;
+  // background: url("../public/imgs/mooning.png"), #f1f1ef; /* Base color */
+  // background-blend-mode: multiply;
+  // background-repeat: repeat;
+  // background: linear-gradient(
+  //   90deg,
+  //   $color-neutral-700,
+  //   $color-neutral-400
+  // ); /* Your gradient */
+  background-color: black;
 
   span {
     display: block;
@@ -18,8 +25,8 @@
     h1 {
       background: linear-gradient(
         90deg,
-        $body-text-color,
-        $color-neutral-500
+        $color-neutral-200,
+        $color-neutral-700
       ); /* Your gradient */
       -webkit-background-clip: text; /* Clips background to the text */
       -webkit-text-fill-color: transparent; /* Makes the text transparent */

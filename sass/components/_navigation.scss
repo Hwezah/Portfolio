@@ -10,17 +10,19 @@
     a {
       display: inline-block;
       cursor: pointer;
-      color: $body-text-color;
+      color: $color-neutral-000;
       text-decoration: $navigation-link-text-decoration;
+      transition: all 0.3s ease;
     }
   }
   .nav-link-group1 a {
-    background-color: #ffff;
+    background-color: $body-text-color;
     padding: $size-1 $size-4;
     border-radius: 50px;
+
     &:is(:hover, :focus) {
-      color: $color-neutral-000;
-      background-color: $body-text-color;
+      color: $color-neutral-1000;
+      background-color: $color-neutral-000;
     }
   }
 
@@ -28,6 +30,7 @@
     background-color: none;
     &:is(:hover, :focus) {
       background-color: none;
+      scale: 1.2;
     }
   }
   .nav-link-group2 li:not(:last-child)::after {
