@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+.services {
+  background-color: $color-neutral-1000;
+  &__text {
+  }
+  &__cta-btn {
+    transform: rotate(-15deg);
+  }
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: $color-neutral-800;
+  margin: 0 -14rem; /* Space between the lines and the button */
+}
