@@ -8,14 +8,14 @@
   // width: fit-content;
 }
 
-.flex-group__col-gap-loose {
+.flex-group-col-gap-loose {
   --flex-column-gap: 3rem;
 }
 
-.flex-group__col-gap-tight {
+.flex-col-gap-tight {
   --flex-column-gap: 1rem;
 }
-.flex-group__col-gap-tighter {
+.flex-col-gap-tighter {
   --flex-column-gap: 0.5rem;
 }
 
@@ -29,4 +29,7 @@
 }
 .flex-nowrap {
   flex-wrap: nowrap;
+}
+.direction-column {
+  flex-direction: column;
 }

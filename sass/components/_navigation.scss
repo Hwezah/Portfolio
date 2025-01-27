@@ -3,24 +3,31 @@
 .navigation {
   background-color: #f1f1ef;
   .nav {
-    --flex-column-gap: #{$navigation-gap};
     list-style: none;
     font-family: $navigation-font-family;
     font-weight: $navigation-font-weight;
-    li {
-      background-color: #ffff;
-      padding: $size-1 $size-4;
-      border-radius: 50px;
-    }
+
     a {
       display: inline-block;
       cursor: pointer;
       color: $navigation-color;
       text-decoration: $navigation-link-text-decoration;
-
       &:is(:hover, :focus) {
         color: $navigation-color-hover;
       }
     }
+  }
+  .nav-link-group1 a {
+    background-color: #ffff;
+    padding: $size-1 $size-4;
+    border-radius: 50px;
+  }
+
+  .nav-link-group2 a {
+    background-color: none;
+  }
+  .nav-link-group2 li:not(:last-child)::after {
+    content: " /"; /* Add a backslash after each item except the last one */
+    margin-left: 5px; /* Optional: adds space before the backslash */
   }
 }

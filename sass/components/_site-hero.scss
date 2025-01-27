@@ -1,3 +1,26 @@
+@use "../abstracts" as *;
 .hero {
+  justify-content: center;
   background-color: #f1f1ef;
+  min-height: 60vh;
+  span {
+    display: block;
+  }
+  &__img {
+    border-radius: 50%;
+    max-width: 50%;
+  }
+  &__content {
+  }
+  &__text {
+  }
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    background-color: black;
+    padding: $size-4 $size-8;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: $size-8;
+  }
 }
