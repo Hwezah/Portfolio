@@ -11,6 +11,7 @@
 .line {
   flex: 1;
   height: 1px;
+  max-width: 36%;
   background-color: $color-neutral-800;
-  margin: 0 6rem; /* Space between the lines and the button */
+  margin: 0 -2rem; /* Space between the lines and the button */
 }
