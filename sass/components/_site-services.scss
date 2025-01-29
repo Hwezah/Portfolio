@@ -1,9 +1,9 @@
 @use "../abstracts" as *;
-.services {
+.site-services {
   background-color: $color-neutral-1000;
   &__text {
   }
-  &__cta-btn {
+  .cta-btn {
     transform: rotate(-15deg);
   }
 }
