@@ -1,17 +1,41 @@
 @use "../abstracts" as *;
 
-.nav {
-  --flex-column-gap: #{$navigation-gap};
-  list-style: none;
-  font-family: $navigation-font-family;
-  font-weight: $navigation-font-weight;
+.navigation {
+  // background-color: #f1f1ef;
+  .nav {
+    list-style: none;
+    font-family: $navigation-font-family;
+    font-weight: $navigation-font-weight;
 
-  a {
-    color: $navigation-color;
-    text-decoration: $navigation-link-text-decoration;
+    a {
+      display: inline-block;
+      cursor: pointer;
+
+      text-decoration: $navigation-link-text-decoration;
+      transition: all 0.3s ease;
+    }
+  }
+  .nav-link-group1 a {
+    color: $color-neutral-000;
+    background-color: $color-neutral-800;
+    padding: $size-1 $size-4;
+    border-radius: 50px;
 
     &:is(:hover, :focus) {
-      color: $navigation-color-hover;
+      color: $color-neutral-1000;
+      background-color: $color-neutral-000;
     }
+  }
+
+  .nav-link-group2 a {
+    background-color: none;
+    &:is(:hover, :focus) {
+      background-color: none;
+      scale: 1.2;
+    }
+  }
+  .nav-link-group2 li:not(:last-child)::after {
+    content: " /"; /* Add a backslash after each item except the last one */
+    margin-left: 5px; /* Optional: adds space before the backslash */
   }
 }

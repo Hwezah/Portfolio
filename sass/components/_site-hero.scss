@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+.hero {
+  border-radius: 50px 50px 0 0;
+  justify-content: center;
+  // background: url("../public/imgs/mooning.png"), #f1f1ef; /* Base color */
+  // background-blend-mode: multiply;
+  // background-repeat: repeat;
+  // background: linear-gradient(
+  //   90deg,
+  //   $color-neutral-700,
+  //   $color-neutral-400
+  // ); /* Your gradient */
+  background-color: black;
+
+  span {
+    display: block;
+  }
+  &__img {
+    border-radius: 50%;
+    max-width: 40%;
+  }
+  &__content {
+  }
+  &__text {
+    h1 {
+      background: linear-gradient(
+        90deg,
+        $color-neutral-200,
+        $color-neutral-700
+      ); /* Your gradient */
+      -webkit-background-clip: text; /* Clips background to the text */
+      -webkit-text-fill-color: transparent; /* Makes the text transparent */
+      background-clip: text; /* Standard property for text clipping */
+      text-fill-color: transparent; /* Fallback for non-webkit browsers */
+    }
+  }
+
+  &__link {
+    svg {
+      padding: none;
+      height: 20px;
+      width: 20px;
+      vertical-align: middle;
+    }
+  }
+}
