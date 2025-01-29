@@ -46,3 +46,12 @@ $font-weight-bold: $-fw-700;
 h1 {
   line-height: 1.2;
 }
+h2 {
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-700;
+}
+h3 {
+  line-height: 1.2;
+  font-size: $font-size-600;
+  font-weight: $font-weight-semi-bold;
+}

@@ -35,3 +35,14 @@
     }
   }
 }
+
+.cta-btn {
+  align-self: center;
+  text-decoration: none;
+  color: $color-neutral-000;
+  background-color: $color-neutral-800;
+  padding: $size-4 $size-6;
+  border-radius: 50px;
+  display: inline-block;
+  margin-top: $size-8;
+}
