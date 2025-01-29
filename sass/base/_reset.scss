@@ -15,7 +15,11 @@ picture {
   display: block;
   max-width: 100%;
 }
-// svg {
-//   height: 44px;
-//   width: 44px;
-// }
+svg {
+  // height: 44px;
+  // width: 44px;
+  display: inline-block;
+  &:is(:hover) {
+    fill: white;
+  }
+}
