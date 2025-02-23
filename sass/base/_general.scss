@@ -11,8 +11,15 @@ body {
 
 a {
   color: $link-color;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: $navigation-link-text-decoration;
+  transition: all 0.3s ease;
 }
 
 a:is(:hover, :focus) {
   color: $link-color-hover;
+}
+ul {
+  list-style: none;
 }
