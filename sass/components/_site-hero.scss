@@ -35,12 +35,10 @@
     }
   }
 
-  &__link {
-    svg {
-      padding: none;
-      height: 20px;
-      width: 20px;
-      vertical-align: middle;
-    }
+  svg {
+    padding: none;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
   }
 }
