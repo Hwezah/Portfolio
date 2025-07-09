@@ -76,7 +76,7 @@ const cardVariants = {
 export default function Projects() {
   return (
     <section id="projects" className="mt-[4rem]">
-      <h2 className="text-3xl text-white font-bold mb-6 pl-6">Projects</h2>
+      <h2 className="text-3xl text-white font-bold mb-6 md:pl-6">Projects</h2>
 
       <div className="">
         {projects.map((project, i) => (
