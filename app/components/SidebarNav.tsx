@@ -12,13 +12,13 @@ const navLinks = [
 
 export default function SidebarNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const navRef = useRef();
+  const navRef = useRef<HTMLElement>(null);
 
   const toggleNav = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (navRef.current && !navRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };

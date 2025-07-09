@@ -110,7 +110,7 @@ export default function Projects() {
                 <p className="mb-4 text-sm">{project.description}</p>
                 <div>
                   <div className="flex flex-wrap gap-2 text-sm mb-4">
-                    {project.tech.map((tech, i) => (
+                    {project.tech.map((tech) => (
                       <span
                         key={tech}
                         className=" bg-white/5 px-3 py-1 text-[#d66a88] text-sm rounded"
