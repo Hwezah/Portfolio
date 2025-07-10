@@ -78,74 +78,87 @@ export default function Projects() {
     <section id="projects" className="mt-[4rem]">
       <h2 className="text-3xl text-white font-bold mb-6 md:pl-6">Projects</h2>
 
-      <div className="">
-        {projects.map((project, i) => (
-          <motion.div
-            key={project.title}
-            className="group py-6 cursor-pointer md:hover:bg-white/5 my-4 bg-white/5 md:bg-transparent transition duration-200 rounded-md p-6"
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={cardVariants}
-          >
-            <div className=" md:flex gap-4 ">
-              <div className="w-[100%] md:max-w-[20%] mt-1 relative aspect-[21/9] mb-2">
-                {project.image !== "#" ? (
-                  <Image
-                    src={project.image}
-                    alt={`Screenshot of ${project.title}`}
-                    fill
-                    className="rounded border-slate-200/10 transition md:object-contain object-cover object-top"
-                  />
-                ) : null}
-              </div>
-              <div className="md:max-w-[75%]">
-                <div className="group flex  items-center gap-1 text-xl font-semibold group-hover:text-[#d66a88] text-gray-200 transition">
-                  <span>{project.title}</span>
-                  <span>
-                    <MdArrowOutward className="transition-transform duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </span>
-                </div>
-                <p className="mb-4 text-sm">{project.description}</p>
-                <div>
-                  <div className="flex flex-wrap gap-2 text-sm mb-4">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className=" bg-white/5 px-3 py-1 text-[#d66a88] text-sm rounded"
-                      >
-                        {tech}
+      <div>
+        {projects.map(
+          (project, i) =>
+            project.link && (
+              <motion.div
+                key={project.title}
+                className="group py-6 cursor-pointer md:hover:bg-white/5 my-4 bg-white/5 md:bg-transparent transition duration-200 rounded-md p-6 relative"
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={cardVariants}
+              >
+                <div className="md:flex gap-4">
+                  <div className="w-full md:max-w-[20%] mt-1 relative aspect-[21/9] mb-2">
+                    {project.image !== "#" ? (
+                      <Image
+                        src={project.image}
+                        alt={`Screenshot of ${project.title}`}
+                        fill
+                        className="rounded border-slate-200/10 transition md:object-contain object-cover object-top"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    ) : null}
+                  </div>
+                  <div className="md:max-w-[75%]">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute inset-0 w-full h-full z-10"
+                    ></a>
+
+                    <div className="group flex items-center gap-1 text-xl font-semibold group-hover:text-[#d66a88] text-gray-200 transition">
+                      <span>{project.title}</span>
+                      <span>
+                        <MdArrowOutward className="transition-transform duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                       </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-4">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm hover:underline"
-                      >
-                        GitHub
-                      </a>
-                    )}
-                    {project.link && (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm hover:underline"
-                      >
-                        Live Site
-                      </a>
-                    )}
+                    </div>
+
+                    <p className="mb-4 text-sm">{project.description}</p>
+
+                    <div>
+                      <div className="flex flex-wrap gap-2 text-sm mb-4">
+                        {project.tech.map((tech) => (
+                          <span
+                            key={tech}
+                            className="bg-white/5 px-3 py-1 text-[#d66a88] text-sm rounded"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex gap-4">
+                        {project.github && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm hover:underline"
+                          >
+                            GitHub
+                          </a>
+                        )}
+                        {project.link && (
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm hover:underline"
+                          >
+                            Live Site
+                          </a>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </motion.div>
-        ))}
+              </motion.div>
+            )
+        )}
       </div>
     </section>
   );
