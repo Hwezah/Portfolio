@@ -59,6 +59,7 @@ const projects: Project[] = [
     title: "Blog CMS",
     description: "A blog built with a headless CMS and deployed on Vercel.",
     tech: ["Next.js", "Markdown", "Tailwind"],
+    link: "#",
     github: "https://github.com/yourusername/blog",
     image: "#",
   },

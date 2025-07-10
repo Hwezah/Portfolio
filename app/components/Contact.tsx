@@ -8,12 +8,26 @@ export default function Contact() {
         I&apos;m currently open to new opportunities, collaborations, or just a
         chat. Feel free to drop me a message!
       </p>
-      <a
-        href="mailto:yourname@email.com"
-        className="inline-block  text-white py-3 rounded-lg transition"
-      >
-        Say Hello
-      </a>
+      <div className="flex gap-8 items-center">
+        <a
+          href="https://github.com/Hwezah"
+          className="inline-block  text-white  rounded-lg transition"
+        >
+          Github
+        </a>
+        <a
+          href="https://linkedin.com/in/hwezah"
+          className="inline-block  text-white rounded-lg transition"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://hwezah.dev@gmail.com"
+          className="inline-block  text-white rounded-lg transition"
+        >
+          Email
+        </a>
+      </div>
     </section>
   );
 }
