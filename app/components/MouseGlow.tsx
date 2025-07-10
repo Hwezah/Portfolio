@@ -15,9 +15,9 @@ export default function MouseGlow() {
 
   return (
     <div
-      className="hidden pointer-events-none fixed inset-0 z-0 transition-all duration-300"
+      className="hidden md:block pointer-events-none fixed inset-0 z-0 transition-all duration-300"
       style={{
-        background: `radial-gradient(800px circle at ${position.x}px ${position.y}px, rgba(255, 255, 255, 0.09), transparent 60%)`,
+        background: `radial-gradient(800px circle at ${position.x}px ${position.y}px, rgba(255, 255, 255, 0.12), transparent 80%)`,
       }}
     />
   );
