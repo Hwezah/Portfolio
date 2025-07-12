@@ -1,5 +1,8 @@
 "use client";
 
+import { FiGithub, FiMail } from "react-icons/fi";
+import { FaLinkedin } from "react-icons/fa";
+
 export default function Contact() {
   return (
     <section id="contact" className="md:px-6 text-center">
@@ -13,20 +16,27 @@ export default function Contact() {
       <div className="flex gap-8 items-center justify-center">
         <a
           href="https://github.com/Hwezah"
-          className="inline-block  text-white  rounded-lg transition"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-white hover:text-[#d66a88] transition"
         >
-          Github
+          <FiGithub size={20} />
+          GitHub
         </a>
         <a
           href="https://linkedin.com/in/hwezah"
-          className="inline-block  text-white rounded-lg transition"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-white hover:text-[#d66a88] transition"
         >
+          <FaLinkedin size={20} />
           LinkedIn
         </a>
         <a
-          href="https://hwezah.dev@gmail.com"
-          className="inline-block  text-white rounded-lg transition"
+          href="mailto:hwezah.dev@gmail.com"
+          className="inline-flex items-center gap-2 text-white hover:text-[#d66a88] transition"
         >
+          <FiMail size={20} />
           Email
         </a>
       </div>
