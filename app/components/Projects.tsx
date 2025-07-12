@@ -1,8 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
+import { FiGithub } from "react-icons/fi"; // GitHub icon
 
 type Project = {
   title: string;
@@ -77,19 +78,22 @@ const cardVariants = {
 export default function Projects() {
   return (
     <section id="projects" className="mt-[4rem]">
-      <h2 className="text-3xl text-white font-bold mb-6 md:pl-6">Projects</h2>
+      <h2 className="lg:text-3xl text-2xl text-white font-bold mb-6 md:pl-6">
+        Projects
+      </h2>
       <div>
         {projects.map(
           (project, i) =>
             project.link && (
               <motion.div
                 key={project.title}
-                className="group py-6 cursor-pointer md:hover:bg-white/5 my-4 bg-white/5 md:bg-transparent transition duration-200 rounded-md p-6 relative"
+                className="group py-6 cursor-pointer md:border-l-[1px] border-[rgba(214,106,136,0.2)] md:hover:border-none md:hover:bg-white/5 my-4 bg-white/5 md:bg-transparent transition duration-200 rounded-md md:rounded-none lg:hover:rounded-md p-6 relative"
                 custom={i}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={cardVariants}
+                onClick={() => window.open(project.link, "_blank")}
               >
                 <div className="md:flex gap-4">
                   <div className="w-full md:max-w-[20%] mt-1 relative aspect-[21/9] mb-2">
@@ -104,13 +108,6 @@ export default function Projects() {
                     ) : null}
                   </div>
                   <div className="md:max-w-[75%]">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="absolute inset-0 w-full h-full z-10"
-                    ></a>
-
                     <div className="group flex items-center gap-1 text-xl font-semibold group-hover:text-[#d66a88] text-gray-200 transition">
                       <span>{project.title}</span>
                       <span>
@@ -131,14 +128,16 @@ export default function Projects() {
                           </span>
                         ))}
                       </div>
-                      <div className="flex gap-4">
+                      <div className="flex gap-4 items-center">
                         {project.github && (
                           <a
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm hover:underline"
+                            className="flex items-center gap-1 text-sm hover:underline"
+                            onClick={(e) => e.stopPropagation()}
                           >
+                            <FiGithub className="text-[#d66a88]" size={16} />
                             GitHub
                           </a>
                         )}
@@ -147,8 +146,14 @@ export default function Projects() {
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm hover:underline"
+                            className="flex items-center gap-2 text-sm hover:underline relative"
+                            onClick={(e) => e.stopPropagation()}
                           >
+                            {/* Pulsating dot */}
+                            <span className="relative flex h-2 w-2">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
+                            </span>
                             Live Site
                           </a>
                         )}

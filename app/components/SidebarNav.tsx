@@ -4,12 +4,16 @@ import { HiX } from "react-icons/hi";
 import { RiMenu3Fill } from "react-icons/ri";
 import Hero from "@/app/components/Hero";
 import Link from "next/link";
+import {
+  HiOutlineDocument,
+  HiOutlineFolder,
+  HiOutlineMail,
+} from "react-icons/hi";
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", label: "About", icon: HiOutlineDocument },
+  { href: "#projects", label: "Projects", icon: HiOutlineFolder },
+  { href: "#contact", label: "Contact", icon: HiOutlineMail },
 ];
-
 export default function SidebarNav() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
@@ -64,15 +68,21 @@ export default function SidebarNav() {
           Kenneth Ruhweza
         </span>
         <div className="space-x-4 text-lg md:text-md flex flex-col gap-[4rem] md:flex-row">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-gray-400 hover:text-white transition items-center gap-2"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const Icon = link.icon;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="flex items-center gap-2 text-gray-200  transition"
+                onClick={() => setIsOpen(false)}
+              >
+                {/* Icon for mobile only */}
+                <Icon className="text-[#d66a88] md:hidden" size={20} />
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
       </nav>
     </>
