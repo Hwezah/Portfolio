@@ -58,10 +58,10 @@ const projects: Project[] = [
   },
   {
     title: "Blog CMS",
-    description: "A blog built with a headless CMS and deployed on Vercel.",
+    description: "A blog built with a headless CMS. Currently in development.",
     tech: ["Next.js", "Markdown", "Tailwind"],
     link: "#",
-    github: "https://github.com/yourusername/blog",
+    github: "#",
     image: "#",
   },
 ];
@@ -93,7 +93,9 @@ export default function Projects() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={cardVariants}
-                onClick={() => window.open(project.link, "_blank")}
+                onClick={() =>
+                  project.link !== "#" && window.open(project.link, "_blank")
+                }
               >
                 <div className="md:flex gap-4">
                   <div className="w-full md:max-w-[20%] mt-1 relative aspect-[21/9] mb-2">
@@ -129,7 +131,7 @@ export default function Projects() {
                         ))}
                       </div>
                       <div className="flex gap-4 items-center">
-                        {project.github && (
+                        {project.title !== "Blog CMS" && project.github && (
                           <a
                             href={project.github}
                             target="_blank"
@@ -141,7 +143,7 @@ export default function Projects() {
                             GitHub
                           </a>
                         )}
-                        {project.link && (
+                        {project.title !== "Blog CMS" && project.link && (
                           <a
                             href={project.link}
                             target="_blank"
@@ -149,13 +151,13 @@ export default function Projects() {
                             className="flex items-center gap-2 text-sm hover:underline relative"
                             onClick={(e) => e.stopPropagation()}
                           >
-                            {/* Pulsating dot */}
-                            <span className="relative flex h-2 w-2">
-                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
-                              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
-                            </span>
                             Live Site
                           </a>
+                        )}
+                        {project.title === "Blog CMS" && (
+                          <span className="text-xs text-gray-400 italic">
+                            In Progress
+                          </span>
                         )}
                       </div>
                     </div>
