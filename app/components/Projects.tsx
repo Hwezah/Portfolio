@@ -37,7 +37,7 @@ const projects: Project[] = [
       "Context API",
     ],
     github: "https://github.com/Hwezah/foundation",
-    link: "https://appfoundation.netlify.app/",
+    link: "https://foundation-next-js.vercel.app/",
     image: "/Foundation.jpg",
   },
   {
