@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
 import { FiGithub, FiImage } from "react-icons/fi"; // GitHub and Image placeholder icons
 
@@ -116,12 +115,10 @@ export default function Projects() {
                     <FiImage size={56} />
                   </div>
                 ) : project.image !== "#" ? (
-                  <Image
+                  <img
                     src={project.image}
                     alt={`Screenshot of ${project.title}`}
-                    fill
-                    className="rounded border-slate-200/10 transition md:object-contain object-cover object-top"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="rounded border-slate-200/10 transition md:object-contain object-cover object-top w-full h-full"
                   />
                 ) : null}
               </div>
