@@ -56,12 +56,30 @@ const projects: Project[] = [
     image: "/SpacesClient-Img-2.jpg",
   },
   {
-    title: "Blog CMS",
-    description: "A blog built with a headless CMS and deployed on Vercel.",
-    tech: ["Next.js", "Markdown", "Tailwind"],
-    link: "#",
-    github: "#",
-    image: "#",
+    title: "MovieBase",
+    description:
+      "Full-stack movie discovery and watchlist app built with Next.js, powered by TMDB and Supabase with Google authentication.",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Shadcn/UI",
+      "NextAuth.js",
+      "Supabase",
+      "TMDB API",
+      "Context API",
+      "React Hook Form",
+
+    ],
+    github: "https://github.com/Hwezah/MovieBase",
+    link: "https://movie-base-zeta.vercel.app/",
+    image: "/MovieBase.png",
+  },
+  {
+    title: "Wordpress",
+    description: "A Wordpress Security Agency Site hosted on Hostinger",
+    tech: ["Wordpress"],
+    link: "https://divineguards.machinenative.io/",
+    image: "/Wordpress Site!.png",
   },
 ];
 
@@ -164,6 +182,10 @@ export default function Projects() {
                         className="flex items-center gap-2 text-sm hover:underline relative"
                         onClick={(e) => e.stopPropagation()}
                       >
+                        <span className="relative flex h-2 w-2" aria-hidden="true">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+                        </span>
                         Live Site
                       </a>
                     )}
